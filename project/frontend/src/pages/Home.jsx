@@ -59,14 +59,14 @@ export default function Home() {
     }
   }
   return (
-    <div>
+    <div class="w=full">
       {isLoggedIn ? (
         <>
       <h2>Hi, {username}. Thanks for loggin in!</h2>
       <button onClick={handleLogout}>Logout</button>
       </>
       ):(
-      <DropdownMenu/>
+      <h1>.</h1>
     )}
     </div>
   )

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,9 +13,8 @@ const DropdownMenu = () => {
       <button className="dropdown-button">Меню</button>
       
       {isOpen && (
-        <div className="dropdown-menu" style={{ backgroundColor: '#1E90FF' }}>
-          <button className="menu-item">Login</button>
-          <button className="menu-item">Регистрация</button>
+        <div className="dropdown-menu">
+          1
         </div>
       )}
     </div>

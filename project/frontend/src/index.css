@@ -1,16 +1,17 @@
+@import "tailwindcss";
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
 }
 
 a {
@@ -24,10 +25,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  justify-content: space-between;
+  color: #213547;
+  background-color: #ffffff;
 }
 
 h1 {
@@ -36,35 +37,22 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 10px 20px 10px 0;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: white;
   cursor: pointer;
   transition: border-color 0.25s;
+  width: 100%;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #000000;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
 
 .dropdown-container {
@@ -85,23 +73,26 @@ button:focus-visible {
   top: 100%;
   left: 0;
   min-width: 160px;
+  background-color: white;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   border-radius: 4px;
-  padding: 10px 0;
 }
 
 .menu-item {
   width: 100%;
-  padding: 12px 16px;
+  padding: 12px 16px 12px 6px;
   text-align: left;
   border: none;
-  background: transparent;
+  background: 1px solid transparent;
   cursor: pointer;
-  color: white;
-  font-size: 14px;
+  color: black;
+  font-size: 16px;
+  transition: border-color 0.3s;
 }
 
 .menu-item:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 0 1px black;
+  transition: 0.3s;
+  
 }
