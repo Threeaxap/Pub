@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { navbar } from '../data/navigationbar';
+import { data } from '../data/navigationbar';
 
 const Cat_2_DM = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ const Cat_2_DM = () => {
       
       {isOpen && (
         <div className="dropdown-menu">
-          {navbar.filter(item => item.id > 3 && item.id < 7).map(button => (
+          {data.navbar.filter(item => item.id > 3 && item.id < 7).map(button => (
             <button className='menu-item' key={button.id}>
                 {button.name}
             </button>

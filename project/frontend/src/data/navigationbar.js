@@ -1,4 +1,4 @@
-import img1 from "./assets/user_icon"
+import img1 from '../assets/user_icon.svg'
 
 const navbar = [
     {
@@ -42,8 +42,8 @@ const navbar = [
 const images = [
     {
         id:1,
-        name: img1
+        image: img1
     }
 ]
 
-export const data = [navbar, images]
+export const data = {navbar, images}

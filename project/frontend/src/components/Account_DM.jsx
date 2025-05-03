@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { navbar } from '../data/navigationbar';
+import { data } from '../data/navigationbar';
+import { Outlet, Link } from "react-router-dom";
 
 const Account_DM = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,15 +11,16 @@ const Account_DM = () => {
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <button className="dropdown-button">Category_3</button>
+      <button className="dropdown-button">
+        {data.images.filter(item => item.id == 1).map(image => (
+          <img key={image.id} src={image.image} alt={image.id} />
+        ))}
+      </button>
       
       {isOpen && (
-        <div className="dropdown-menu">
-            {navbar.filter(item => item.id > 6).map(button => (
-                <button key={button.id}>
-                    {button.name}
-                </button>
-            ))}
+        <div className="dropdown-menu-l" class='grid bg-white mr-[20px]'>
+            <Link className='menu-item-acc' to="/login">Login</Link>
+            <Link className='menu-item-acc' to="/register">Register</Link>
         </div>
       )}
     </div>
