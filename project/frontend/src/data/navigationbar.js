@@ -1,4 +1,6 @@
 import img1 from '../assets/user_icon.svg'
+import image1 from '../assets/image1.jpg'
+import image2 from '../assets/image2.jpeg'
 
 const navbar = [
     {
@@ -46,4 +48,91 @@ const images = [
     }
 ]
 
-export const data = {navbar, images}
+const products = [
+    {
+        id:1,
+        img:image1,
+        material:"COTTON",
+        name:"DRESS",
+        price: 54
+    },
+    {
+        id:1,
+        img:image1,
+        material:"COTTON",
+        name:"DRESS",
+        price: 54
+    },
+    {
+        id:1,
+        img:image1,
+        material:"COTTON",
+        name:"DRESS",
+        price: 54
+    },
+    {
+        id:1,
+        img:image1,
+        material:"COTTON",
+        name:"DRESS",
+        price: 54
+    },
+    {
+        id:1,
+        img:image1,
+        material:"COTTON",
+        name:"DRESS",
+        price: 54
+    },
+    {
+        id:1,
+        img:image1,
+        material:"COTTON",
+        name:"DRESS",
+        price: 54
+    },
+    {
+        id:1,
+        img:image1,
+        material:"COTTON",
+        name:"DRESS",
+        price: 54
+    },
+    {
+        id:1,
+        img:image1,
+        material:"COTTON",
+        name:"DRESS",
+        price: 54
+    },
+    {
+        id:1,
+        img:image1,
+        material:"COTTON",
+        name:"DRESS",
+        price: 54
+    },
+    {
+        id:1,
+        img:image1,
+        material:"COTTON",
+        name:"DRESS",
+        price: 54
+    },
+    {
+        id:1,
+        img:image1,
+        material:"COTTON",
+        name:"DRESS",
+        price: 54
+    },
+    {
+        id:1,
+        img:image1,
+        material:"COTTON",
+        name:"DRESS",
+        price: 54
+    },
+]
+
+export const data = {navbar, images, products}

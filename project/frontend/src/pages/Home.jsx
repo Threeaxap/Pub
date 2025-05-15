@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from "axios"
 import DropdownMenu from '../components/DropMen'
+import Card from '../components/Card'
 
 export default function Home() {
   
@@ -66,7 +67,9 @@ export default function Home() {
       <button onClick={handleLogout}>Logout</button>
       </>
       ):(
-      <h1>.</h1>
+      <div>
+        <Card/>
+      </div>
     )}
     </div>
   )
