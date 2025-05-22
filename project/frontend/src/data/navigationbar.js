@@ -1,6 +1,7 @@
 import img1 from '../assets/user_icon.svg'
 import image1 from '../assets/image1.jpg'
-import image2 from '../assets/image2.jpeg'
+import Account_Icon from '../assets/acc-icon.svg'
+import Search_Icon from '../assets/search-icon.svg'
 
 const navbar = [
     {
@@ -45,6 +46,14 @@ const images = [
     {
         id:1,
         image: img1
+    },
+    {
+        id:2,
+        image: Account_Icon
+    },
+    {
+        id: 3,
+        image: Search_Icon
     }
 ]
 
