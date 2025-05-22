@@ -20,6 +20,7 @@ export const Search = () => {
                     <div>
                         <h2>ПРЕДЛОЖЕНИЯ</h2>
                         <Link to='goods'>ПОПУЛЯРНОЕ</Link>
+                        <Link to='goods'>НОВОЕ</Link>
                     </div>
                     <div>
 
