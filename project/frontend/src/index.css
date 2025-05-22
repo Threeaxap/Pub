@@ -37,24 +37,6 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border: 1px solid transparent;
-  padding: 10px 20px 10px 0;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: white;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  width: 100%;
-}
-button:hover {
-  border-color: #000000;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 .dropdown-container {
   position: relative;
