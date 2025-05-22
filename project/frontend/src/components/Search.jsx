@@ -17,13 +17,17 @@ export const Search = () => {
                 </div>
                 <div class='bg-black w-100% h-[1px] mt-[15px] mb-[40px]'></div>
                 <div>
-                    <div>
-                        <h2>ПРЕДЛОЖЕНИЯ</h2>
-                        <Link to='goods'>ПОПУЛЯРНОЕ</Link>
-                        <Link to='goods'>НОВОЕ</Link>
+                    <div class='flex-col'>
+                        <h2 class='text-[18px] mb-[10px]'>ПРЕДЛОЖЕНИЯ</h2>
+                        <h3>
+                            <Link to='goods'>ПОПУЛЯРНОЕ</Link>
+                        </h3>
+                        <h3>
+                            <Link to='goods'>НОВОЕ</Link>
+                        </h3>
                     </div>
                     <div>
-
+                        
                     </div>
                 </div>
             </div>

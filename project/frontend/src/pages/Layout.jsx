@@ -1,6 +1,8 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import { data } from "../data/navigationbar";
+import { Dropsearch } from "../components/Dropsearch";
+import Dropmenu2 from "../components/Dropmenu2";
 
 export default function Layout() {
 	return (
@@ -15,6 +17,7 @@ export default function Layout() {
                     </li>
                 </ul>
                 <div class='mr-[40px]'>
+                    <Dropmenu2/>
                     <Link to="/login">
                         {data.images.filter(item => item.id == 2).map(item =>(
                             <img key={item.id} src={item.image} alt="" />
