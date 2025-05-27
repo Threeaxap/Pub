@@ -69,7 +69,7 @@ export default function Home() {
       </>
       ):(
       <div>
-        <Search/>
+        123
       </div>
     )}
     </div>

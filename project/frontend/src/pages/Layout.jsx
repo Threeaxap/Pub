@@ -2,31 +2,52 @@ import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import { data } from "../data/navigationbar";
 import { Dropsearch } from "../components/Dropsearch";
-import Dropmenu2 from "../components/Dropmenu2";
+import Navigation_Menu from "../components/Navigation_Menu";
+import { Category_standart } from "../components/Category_standart";
+import { New_cat } from "../components/Navigation/New_cat";
+import { Bestseller_cat } from "../components/Navigation/Bestseller_cat";
+import { Cloth_cat } from "../components/Navigation/Cloth_cat";
+import { Bra_cat } from "../components/Navigation/Bra_cat";
+import { Underwear_cat } from "../components/Navigation/Underwear_cat";
+import { Men_Cat } from "../components/Navigation/Men_cat";
+import { Sale_cat } from "../components/Navigation/Sale_cat";
+
 
 export default function Layout() {
 	return (
-		<><div class='bg-black w-100% h-[1px] opacity-20 mt-[30px] mb-[15px]'></div>
-		    <div class="justify-between flex items-center">
-                <h1 class='ml-[40px]'>LOGO</h1>
-                <ul class="flex gap-1.5">
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                    </li>
-                </ul>
-                <div class='mr-[40px]'>
-                    <Dropmenu2/>
-                    <Link to="/login">
-                        {data.images.filter(item => item.id == 2).map(item =>(
-                            <img key={item.id} src={item.image} alt="" />
-                        ))}
-                    </Link>
+		<>
+            <div class='bg-black w-100% h-[1px] opacity-20 mt-[10px] mb-[15px]'></div>
+                <div class="justify-between flex items-center">
+                    <h1 class='ml-[40px]'>LOGO</h1>
+                    <div class='flex gap-[50px]'>
+                        <New_cat/>
+                        <Bestseller_cat/>
+                        <Cloth_cat/>
+                        <Bra_cat/>
+                        <Underwear_cat/>
+                        <Men_Cat/>
+                        <Sale_cat/>
+                    </div>
+                    <div class='mr-[40px] flex items-center gap-[16px]'>
+                        <Link to="/login">
+                            {data.images.filter(item => item.id == 2).map(item =>(
+                                <img class='icon' key={item.id} src={item.image} alt="" />
+                            ))}
+                        </Link>
+                        <Link to="goods">
+                            {data.images.filter(item => item.id == 5).map(item =>(
+                                <img class='icon' key={item.id} src={item.image} alt="" />
+                            ))}
+                        </Link>
+                        <Link to="goods">
+                            {data.images.filter(item => item.id == 1).map(item =>(
+                                <img class='icon' key={item.id} src={item.image} alt="" />
+                            ))}
+                        </Link>
+                    </div>
                 </div>
-            </div>
-            <div class='bg-black w-100% h-[1px] opacity-20 mt-[15px] mb-[30px]'></div>
-            <Outlet/>
+                <div class='bg-black w-100% h-[1px] opacity-20 mt-[15px] mb-[30px]'></div>
+                <Outlet/>
 		</>
 	);
 }
