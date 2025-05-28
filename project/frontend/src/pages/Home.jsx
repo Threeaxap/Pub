@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from "axios"
 import DropdownMenu from '../components/DropMen'
 import Card from '../components/Card'
+import { Search } from '../components/Search'
 
 export default function Home() {
   
@@ -68,7 +69,7 @@ export default function Home() {
       </>
       ):(
       <div>
-        <Card/>
+        123
       </div>
     )}
     </div>
