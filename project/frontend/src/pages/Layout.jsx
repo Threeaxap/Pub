@@ -49,7 +49,6 @@ export default function Layout() {
                 </div>
                 <div class='bg-black w-100% h-[1px] opacity-20 mt-[15px] mb-[30px]'></div>
                 <Outlet/>
-                <Footer/>
 		</>
 	);
 }
