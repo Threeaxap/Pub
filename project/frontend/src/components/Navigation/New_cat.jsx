@@ -15,7 +15,7 @@ export const New_cat = () => {
                     <h2 className='title_w_shadow' key={item.id}>{item.name}</h2>
                 ))}
     </div>
-        {isOpen && (<div onMouseLeave={() => setIsOpen(false)} className='dropsearch' class='flex justify-center bg-white absolute left-1/2 top-[118px] transform -translate-x-1/2 z-2 w-full'>
+        {isOpen && (<div onMouseLeave={() => setIsOpen(false)} className='dropsearch' class='flex justify-center bg-white absolute left-1/2 border-[1px] border-black top-[118px] transform -translate-x-1/2 z-2 w-full transition-all ease-[cubic-bezier(0.68,-0.6,0.32,1.6)] duration-3000'>
             <div class='flex-col  w-[45%] h-[400]'>
                 <div class='flex'>
                     <div>

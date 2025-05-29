@@ -150,3 +150,23 @@ h1 {
 .cat_but:hover {
   border-color: rgba(0, 0, 0, 0.4);
 }
+
+.card_extra{
+  width: inherit;
+  height: inherit;
+  background-color: white;
+  color: black;
+  transition:all 5s ease;
+  padding: 8px;
+  border-radius: 0 4px 4px 0;
+  position: absolute;
+  top: 0;
+  border: 1px black;
+  left: 100%;
+  transform: translateX(0);
+  z-index: 2;
+}
+
+.card_extra.card_extra--visible {
+  transform: translateX(-100%);
+}

@@ -69,70 +69,7 @@ const products = [
         price: 54
     },
     {
-        id:1,
-        img:image1,
-        material:"COTTON",
-        name:"DRESS",
-        price: 54
-    },
-    {
-        id:1,
-        img:image1,
-        material:"COTTON",
-        name:"DRESS",
-        price: 54
-    },
-    {
-        id:1,
-        img:image1,
-        material:"COTTON",
-        name:"DRESS",
-        price: 54
-    },
-    {
-        id:1,
-        img:image1,
-        material:"COTTON",
-        name:"DRESS",
-        price: 54
-    },
-    {
-        id:1,
-        img:image1,
-        material:"COTTON",
-        name:"DRESS",
-        price: 54
-    },
-    {
-        id:1,
-        img:image1,
-        material:"COTTON",
-        name:"DRESS",
-        price: 54
-    },
-    {
-        id:1,
-        img:image1,
-        material:"COTTON",
-        name:"DRESS",
-        price: 54
-    },
-    {
-        id:1,
-        img:image1,
-        material:"COTTON",
-        name:"DRESS",
-        price: 54
-    },
-    {
-        id:1,
-        img:image1,
-        material:"COTTON",
-        name:"DRESS",
-        price: 54
-    },
-    {
-        id:1,
+        id:2,
         img:image1,
         material:"COTTON",
         name:"DRESS",
