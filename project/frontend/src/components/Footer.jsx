@@ -6,7 +6,8 @@ const Footer = () => {
         <div class='bg-black w-100% h-[2px] opacity-20 mt-[40px] mb-[2px]'></div>
         <div class='bg-black w-100% h-[2px] opacity-20 mb-[15px]'></div>
         <div class='p-[30px]'>
-            <p>Обратная связь: threeaxap@mail.ru</p>
+            <p>Тех-поддержка: tech-support@mail.ru</p>
+            <p>Обратная связь: answer@mail.ru</p>
         </div>
     </footer>
   )
