@@ -5,6 +5,9 @@ import Layout from './pages/Layout';
 import Register from './pages/Register';
 import Login from './pages/Login'
 import Goods from './pages/Goods';
+import Footer from './components/Footer';
+
+
 function App() {
 
   return (
@@ -15,7 +18,6 @@ function App() {
     <Route path="login" element={<Login/>}/>
     <Route path="register" element={<Register/>}/>
     <Route path='goods' element={<Goods/>}/>
-    
     </Route>
    </Routes>
    

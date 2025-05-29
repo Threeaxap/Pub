@@ -116,9 +116,37 @@ h1 {
 }
 
 .arrow{
-  height: 14px;
+  height: 18px;
 }
 
 .icon{
   height: 22px;
+  transition: 0.3s;
+}
+
+.icon:hover{
+  scale: 1.3;
+  
+}
+
+.title_w_shadow{
+  text-shadow: 1.1px 1.1px 1.3px rgba(0, 0, 0, 0.15);
+}
+
+.cat_but {
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  display: flex;
+  line-height: 1;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  border-radius: 6px;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.cat_but:hover {
+  border-color: rgba(0, 0, 0, 0.4);
 }

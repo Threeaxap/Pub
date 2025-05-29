@@ -11,12 +11,9 @@ export const Sale_cat = () => {
         onClick={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
     >
-    <div class="text-[18px] text-brown text-left font-primary flex leading-none cursor-pointer">
+    <div className='cat_but'>
                 {data.categories.filter(item =>(item.id == 7)).map(item =>(
-                    <h2 key={item.id}>{item.name}</h2>
-                ))}
-                {data.images.filter(item =>(item.id == 4)).map(item =>(
-                    <img className='arrow' key={item.id} src={item.image} alt="" />
+                    <h2 className='title_w_shadow' key={item.id}>{item.name}</h2>
                 ))}
     </div>
         {isOpen && (<div className='dropsearch' class='flex justify-center absolute left-1/2 transform -translate-x-1/2 z-2 w-full'>
