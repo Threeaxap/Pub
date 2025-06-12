@@ -170,3 +170,32 @@ h1 {
 .card_extra.card_extra--visible {
   transform: translateX(-100%);
 }
+
+.size_but{
+  height: fit-content;
+  font-size: 13px;
+  padding: 1px 4px 1px 4px;
+  border-radius: 5px;
+  border: 0.5px solid black;
+}
+
+.order_but {
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  background-color: black;
+  display: flex;
+  line-height: 1;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  border-radius: 6px;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.order_but:hover {
+  border-color: rgba(0, 0, 0, 0.4);
+  background-color: white;
+  color: black;
+}
