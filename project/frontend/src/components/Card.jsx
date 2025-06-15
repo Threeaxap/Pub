@@ -35,6 +35,11 @@ const Card = () => {
                       <div class='mt-[10px] mb-[40px]'>
                           <h3>Размеры:</h3>
                           <div class='grid grid-cols-6 gap-[8px] pt-[4px]'>
+                            <div className='size_but'>100b</div>
+                            <div className='size_but'>100b</div>
+                            <div className='size_but'>100b</div>
+                            <div className='size_but'>100b</div>
+                            <div className='size_but'>100b</div>
                           </div>                          
                       </div>
                       <h4 class='text-[22px] mb-[10px]'>{item.price}</h4>

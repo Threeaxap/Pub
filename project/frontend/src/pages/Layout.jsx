@@ -12,6 +12,7 @@ import { Underwear_cat } from "../components/Navigation/Underwear_cat";
 import { Men_Cat } from "../components/Navigation/Men_cat";
 import { Sale_cat } from "../components/Navigation/Sale_cat";
 import Footer from "../components/Footer";
+import CartList from "../components/Cart";
 
 
 export default function Layout() {
@@ -40,11 +41,7 @@ export default function Layout() {
                                 <img class='icon' key={item.id} src={item.image} alt="" />
                             ))}
                         </Link>
-                        <Link to="goods">
-                            {data.images.filter(item => item.id == 1).map(item =>(
-                                <img class='icon' key={item.id} src={item.image} alt="" />
-                            ))}
-                        </Link>
+                        <CartList/>
                     </div>
                 </div>
                 <div class='bg-black w-100% h-[1px] opacity-20 mt-[15px] mb-[30px]'></div>
