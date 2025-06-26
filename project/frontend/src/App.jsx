@@ -6,23 +6,28 @@ import Register from './pages/Register';
 import Login from './pages/Login'
 import Goods from './pages/Goods';
 import Footer from './components/Footer';
-import Profile from './pages/Profile';
-import WithLayout from './pages/WithLayout';
-
+import Profile from './pages/Profile/Profile';
+import ProfileCart from './pages/Profile/ProfileCart';
+import Favourite from './pages/Profile/Favourite';
+import Orders from './pages/Profile/Orders';
+import ProfileInfo from './pages/Profile/ProfileInfo';
 
 function App() {
 
   return (
   <>
+    <Layout/>
     <Routes>
-      <Route element={<WithLayout/>}>
         <Route path='/' element={<Home/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
-        <Route path='/goods' element={<Goods/>}/>
+        <Route path='/goods' element={<Goods/>}/>     
+        <Route path='/profile' element={<Profile/>}>
+          <Route path='cart' element={<ProfileCart/>}/>
+          <Route path='fav' element={<Favourite/>}/>
+          <Route path='orders' element={<Orders/>}/>
+          <Route path='info' element={<ProfileInfo/>}/>
       </Route>
-
-      <Route path='/profile' element={<Profile/>}/>
     </Routes>
     <Footer/>
 

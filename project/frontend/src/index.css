@@ -146,6 +146,7 @@ h1 {
 
 .title_w_shadow{
   text-shadow: 1.1px 1.1px 1.3px rgba(0, 0, 0, 0.15);
+  letter-spacing: 1px;
 }
 
 .cat_but {
@@ -207,9 +208,9 @@ h1 {
 
 .order_but {
   font-size: 18px;
-  color: white;
+  color: black;
+  background-color: rgb(242, 241, 237);
   text-align: center;
-  background-color: black;
   display: flex;
   line-height: 1;
   cursor: pointer;
@@ -260,28 +261,47 @@ h1 {
 
 }
 
-.prof_but {
+.prof_cat_but {
   font-size: 18px;
-  color: rgb(255, 255, 255);
-  background-color: black;
+  width: fit-content;
+  font-weight: 400;
+  color: black;
   text-align: center;
   display: flex;
+  box-sizing: border-box;
   line-height: 1;
   cursor: pointer;
-  border: 1px solid transparent;
-  padding: 10px 20px;
-  border-radius: 6px;
+  border-bottom: 2px solid transparent;
+  padding: 10px 10px;
   box-shadow: none;
   transition: all 0.2s ease;
 }
 
-.prof_but:hover {
-  background-color: white;
-  color: black;
-  border-color: black;
-  box-shadow: 1px 1px 40px rgba(255, 255, 255, 0.26);
+.prof_cat_but:hover {
+  border-color: rgba(0, 0, 0, 0.4);
 }
 
 .drop-scroll{
   height: 400px;
+}
+
+.title_w_shadow_p{
+  text-shadow: 1.1px 1.1px 1.3px rgba(0, 0, 0, 0.15);
+  font-size: 27px;
+  font-weight: 370;
+  color: black;
+  letter-spacing: 1px;
+}
+
+.profile_layout{
+  justify-items: center;
+  width: 26%;
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+
+}
+
+.prof_cat_div{
+  height: 300px;
+  margin-top: 30px;
+  
 }
