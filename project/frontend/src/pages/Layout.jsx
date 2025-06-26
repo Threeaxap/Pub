@@ -31,7 +31,7 @@ export default function Layout() {
                         <Sale_cat/>
                     </div>
                     <div class='mr-[40px] flex items-center gap-[28px]'>
-                        <Link to="/login">
+                        <Link to="/profile">
                             {data.images.filter(item => item.id == 2).map(item =>(
                                 <img class='icon' key={item.id} src={item.image} alt="" />
                             ))}
