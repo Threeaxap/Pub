@@ -14,7 +14,6 @@ function App() {
 
   return (
   <>
-    <Layout/>
     <Routes>
       <Route element={<WithLayout/>}>
         <Route path='/' element={<Home/>}/>
@@ -22,7 +21,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path='/goods' element={<Goods/>}/>
       </Route>
-      
+
       <Route path='/profile' element={<Profile/>}/>
     </Routes>
     <Footer/>
