@@ -8,6 +8,7 @@ const Card = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
       <div class='grid grid-cols-6 gap-[24px]'>
@@ -34,13 +35,21 @@ const Card = () => {
                       </div>
                       <div class='mt-[10px] mb-[40px]'>
                           <h3>Размеры:</h3>
-                          <div class='grid grid-cols-6 gap-[8px] pt-[4px]'>
-                            <div className='size_but'>100b</div>
-                            <div className='size_but'>100b</div>
-                            <div className='size_but'>100b</div>
-                            <div className='size_but'>100b</div>
-                            <div className='size_but'>100b</div>
-                          </div>                          
+                          <div 
+                            class="border-[1px] absolute z-3 bg-white w-[100px]"
+                            onMouseEnter={() => setIsOpen(true)}
+                            onMouseLeave={() => setIsOpen(false)}
+                          >
+                            <button className="">Меню</button>
+                            
+                            {isOpen && (
+                              <div className="drop-scroll">
+                                {data.products.map(item =>(
+                                  <h3 key={item.id}>{item.sizes}</h3>
+                                ))}
+                              </div>
+                            )}
+                          </div>                         
                       </div>
                       <h4 class='text-[22px] mb-[10px]'>{item.price}</h4>
                       <button className='order_but'>

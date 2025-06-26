@@ -10,11 +10,11 @@ const DropdownMenu = () => {
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <button className="dropdown-button">Меню</button>
+      <button className="">Меню</button>
       
       {isOpen && (
-        <div className="dropdown-menu">
-          1
+        <div className="drop-scroll">
+          
         </div>
       )}
     </div>

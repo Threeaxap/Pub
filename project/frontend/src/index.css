@@ -281,3 +281,7 @@ h1 {
   border-color: black;
   box-shadow: 1px 1px 40px rgba(255, 255, 255, 0.26);
 }
+
+.drop-scroll{
+  height: 400px;
+}
