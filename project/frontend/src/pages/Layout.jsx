@@ -1,9 +1,7 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import { data } from "../data/navigationbar";
-import { Dropsearch } from "../components/Dropsearch";
-import Navigation_Menu from "../components/Navigation_Menu";
-import { Category_standart } from "../components/Category_standart";
+import { Category_standart } from "../assets/standart_components/Category_standart";
 import { New_cat } from "../components/Navigation/New_cat";
 import { Bestseller_cat } from "../components/Navigation/Bestseller_cat";
 import { Cloth_cat } from "../components/Navigation/Cloth_cat";
@@ -11,8 +9,8 @@ import { Bra_cat } from "../components/Navigation/Bra_cat";
 import { Underwear_cat } from "../components/Navigation/Underwear_cat";
 import { Men_Cat } from "../components/Navigation/Men_cat";
 import { Sale_cat } from "../components/Navigation/Sale_cat";
-import Footer from "../components/Footer";
-import CartList from "../components/Cart";
+import Footer from "../components/Navigation/Footer";
+import CartList from "../components/Product/Cart";
 
 
 export default function Layout() {

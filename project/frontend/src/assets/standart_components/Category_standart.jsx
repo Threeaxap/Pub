@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { data } from '../data/navigationbar'
+import { data } from '../../data/navigationbar'
 
 
 export const Category_standart = () => {

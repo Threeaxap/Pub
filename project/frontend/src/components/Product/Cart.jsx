@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import React from 'react'
-import { data } from '../data/navigationbar';
+import { data } from '../../data/navigationbar';
 import Modal from '@mui/material/Modal';
 
 function CartList() {

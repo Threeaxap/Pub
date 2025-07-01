@@ -1,11 +1,11 @@
 
-import image1 from '../assets/image1.jpg'
-import Account_Icon from '../assets/acc-icon.svg'
-import Search_Icon from '../assets/search-icon.svg'
-import Arrow from '../assets/arrow.svg'
-import Cart_Icon from '../assets/cart-icon.svg'
-import Wish_Icon from '../assets/wish-icon.svg'
-import Cross_Icon from '../assets/cross.svg'
+import image1 from '../assets/images/image1.jpg'
+import Account_Icon from '../assets/images/acc-icon.svg'
+import Search_Icon from '../assets/images/search-icon.svg'
+import Arrow from '../assets/images/arrow.svg'
+import Cart_Icon from '../assets/images/cart-icon.svg'
+import Wish_Icon from '../assets/images/wish-icon.svg'
+import Cross_Icon from '../assets/images/cross.svg'
 
 const images = [
     {

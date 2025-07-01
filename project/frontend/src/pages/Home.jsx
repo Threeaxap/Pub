@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from "axios"
-import DropdownMenu from '../components/DropMen'
-import Card from '../components/Card'
-import { Search } from '../components/Search'
+import DropdownMenu from '../assets/standart_components/DropMen'
+import Card from '../components/Product/Card'
+
 
 export default function Home() {
   

@@ -1,6 +1,6 @@
 import React from 'react'
-import Card from '../components/Card'
-import HoverRevealComponent from '../components/test_slide'
+import Card from '../components/Product/Card'
+
 
 const Goods = () => {
   return (

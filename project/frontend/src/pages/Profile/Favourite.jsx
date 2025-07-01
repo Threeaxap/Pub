@@ -1,8 +1,9 @@
 import React from 'react'
 
+
 const Favourite = () => {
   return (
-    <div>Favourite</div>
+    <div>123</div>
   )
 }
 

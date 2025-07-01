@@ -5,7 +5,7 @@ import Layout from './pages/Layout';
 import Register from './pages/Register';
 import Login from './pages/Login'
 import Goods from './pages/Goods';
-import Footer from './components/Footer';
+import Footer from './components/Navigation/Footer';
 import Profile from './pages/Profile/Profile';
 import ProfileCart from './pages/Profile/ProfileCart';
 import Favourite from './pages/Profile/Favourite';
