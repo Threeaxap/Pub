@@ -1,9 +1,9 @@
 import React from 'react'
-
+import TestCard2 from '../../components/Test/TestCard2'
 
 const Favourite = () => {
   return (
-    <div>123</div>
+    <TestCard2/>
   )
 }
 

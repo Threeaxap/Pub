@@ -6,6 +6,8 @@ import Arrow from '../assets/images/arrow.svg'
 import Cart_Icon from '../assets/images/cart-icon.svg'
 import Wish_Icon from '../assets/images/wish-icon.svg'
 import Cross_Icon from '../assets/images/cross.svg'
+import t_shirt_white from '../assets/images/t-shirt-white.avif'
+import t_shirt_black from '../assets/images/t-shirt-black.avif'
 
 const images = [
     {
@@ -163,4 +165,19 @@ const cart_test = [
     
 ]
 
-export const data = {images, categories, products, cart_test}
+const test_products = [
+    {
+        id:1,
+        img_first_color:t_shirt_black,
+        img_second_color:t_shirt_white,
+        color_first: 'black',
+        color_second: 'whtie',
+        name:"БЮСТ",
+        sizes: ['110b','110b','110b','110b',],
+        price: 1034,
+        desc: "Бюстгальтер без каркасов с мягкой чашкой большой полнотной группы. Выполнен  из плотного  эластичного трикотажного хлопчатобумажного полотна выского качества.  Чашка Т-образной формы, на подкладке, боковая часть чашки усилена дублированной деталью, поддреживающей грудь.Внутренняя сторона чашки выполнена без открытых швов,что  создает  невероятное ощущение комфорта. Широкий стан  на подкладке,  с упругими пластинами, создает стабильную посадку на фигуре. Бретели расширенной формы снимают нагрузку с плечевого пояса. Ширина бретелей и застежек зависит от размера.",
+        material: "92% хлопок, 8 % эластан, подкладка 100% хлопок"
+    },
+]
+
+export const data = {images, categories, products, cart_test, test_products}
