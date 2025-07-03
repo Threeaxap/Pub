@@ -4,15 +4,12 @@ import { data } from '../../data/navigationbar';
 const TestCard2 = () => {
     const [color, setColor] = useState(1);
 
-    
-    useEffect(() => {
-    }, [color]);
 
-    const Render = () => {
+    const Render = (item) => {
         if (color === 1) {
-            return <img src={item.image_first_color} alt="" />
+            return item.image_first_color
         } else if (color === 2) {
-            return <img src={item.image_second_color} alt="" />
+            return item.image_second_color
         }
     }
 
@@ -20,10 +17,10 @@ const TestCard2 = () => {
     return (
         <div>
             {data.test_products.filter(item =>(item.id == 1)).map(item =>(
-                    <img key={item.id} src={Render()} alt="" />
+                    <img key={item.id} src={Render(item)} alt="" />
                 ))}
-            <button onClick={setColor(1)}>Чёрный</button>
-            <button onClick={setColor(1)}>Белый</button>
+            <button onClick={() => setColor(1)}>Чёрный</button>
+            <button onClick={() => setColor(2)}>Белый</button>
         </div>
     );
 };
