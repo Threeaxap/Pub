@@ -42,6 +42,11 @@ INSTALLED_APPS = [
     'product_model',
     'product_size',
     'product_variant',
+    'bra.product_color_bra',
+    'bra.product_image_bra',
+    'bra.product_model_bra',
+    'bra.product_size_bra',
+    'bra.product_variant_bra',
     'rest_framework',
 ]
 
