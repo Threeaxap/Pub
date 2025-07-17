@@ -22,7 +22,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/product/', include('product_variant.urls')),
-    path('api/bra/', include('bra.product_variant_bra.urls')),
+    path('apibra/bra/', include('bra.product_variant_bra.urls')),
+    path('apiund/underwear/', include('underwear.product_variant_underwear.urls')),
 ]
 
 if settings.DEBUG:

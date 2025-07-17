@@ -46,7 +46,14 @@ INSTALLED_APPS = [
     'bra.product_image_bra',
     'bra.product_model_bra',
     'bra.product_size_bra',
+    'bra.product_cup_size_bra',
     'bra.product_variant_bra',
+    'underwear.product_color_underwear',
+    'underwear.product_image_underwear',
+    'underwear.product_gender_underwear',
+    'underwear.product_model_underwear',
+    'underwear.product_size_underwear',
+    'underwear.product_variant_underwear',
     'rest_framework',
 ]
 
@@ -88,8 +95,12 @@ WSGI_APPLICATION = 'test_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'online_shop',
+        'USER': 'postgres',
+        'PASSWORD': '123',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
