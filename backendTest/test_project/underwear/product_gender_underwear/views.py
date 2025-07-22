@@ -1,7 +1,0 @@
-from .serializer import *
-from .models import *
-from rest_framework import viewsets
-
-class ProductGenderViewset(viewsets.ModelViewSet):
-    queryset = ProductGender.objects.all()
-    serializer_class = ProductGenderSerializer
