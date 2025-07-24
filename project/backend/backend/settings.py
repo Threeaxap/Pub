@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,10 +44,24 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     "corsheaders",
+    'bra.product_bra_color',
+    'bra.product_bra_cup_size',
+    'bra.product_bra_image',
+    'bra.product_bra_model',
+    'bra.product_bra_size',
+    'bra.product_bra_variant',
+    'underwear.product_underwear_color',
+    'underwear.product_underwear_gender',
+    'underwear.product_underwear_image',
+    'underwear.product_underwear_model',
+    'underwear.product_underwear_size',
+    'underwear.product_underwear_variant',
 
 ]
 
 MIDDLEWARE = [
+
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -54,9 +69,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-      "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
 ]
+
+CORS_ALLOW_ORIGINS = ['http://localhost:5173/']
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 ROOT_URLCONF = 'backend.urls'
 
@@ -85,9 +104,9 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'shop',
+        'NAME':'online_shop',
         'USER':'postgres',
-        'PASSWORD':'swedxzaqws1247',
+        'PASSWORD':'123',
         'HOST':'localhost',
         'PORT':'5432',
     }
