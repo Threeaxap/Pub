@@ -7,7 +7,7 @@ const Products = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(()=>{
-        axios.get('http://127.0.0.1:8000/api/bra/product_bra_variant/')
+        axios.get('http://127.0.0.1:8000/api/bra/product_bra/')
         .then(response => {
             setProducts(response.data);
             setLoading(false)
@@ -22,7 +22,8 @@ const Products = () => {
         <div>
             {products.map(product => (
                 <div key={product.id}>
-                    <h3>{product.product}</h3>                       
+                    <h3>{product.name}</h3>
+                    <h3>{product.price}</h3>                          
                 </div>
             ))}
         </div>

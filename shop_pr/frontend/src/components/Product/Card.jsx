@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import { data } from '../../data/navigationbar';
 import Modal from '@mui/material/Modal';
 
@@ -9,14 +9,29 @@ const Card = () => {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(()=>{
+        axios.get('http://127.0.0.1:8000/api/bra/product_bra_variant/')
+        .then(response => {
+            setProducts(response.data);
+            setLoading(false)
+        })
+        .catch(error=>{
+            console.error('ошибка при загрузке данных')
+            setLoading(false)
+        })
+    },[])
+
 
     return (
       <div class='grid grid-cols-6 gap-[24px]'>
-        {data.products.map(item =>(
+        {products.map(item =>(
           <div onClick={handleOpen} key={item.id}> 
               <div class='items-end border-black p-[8px] m-[8px] w-fit rounded-[7px] relative'>
-                <img src={item.img} class='w-[300px] rounded-[4px]' alt="" />
-                <h3 class='font-bold'>{item.name}</h3>
+                <img src={item.image} class='w-[300px] rounded-[4px]' alt="" />
+                <h3 class='font-bold'>{item.product_model.name}</h3>
                 <h4 class='text-[rgba(182,38,61)]'>${item.price}</h4>
               </div>
               <Modal
@@ -25,9 +40,9 @@ const Card = () => {
               >
                 <div class='absolute bg-white top-1/4 left-1/4 p-[28px] rounded-[6px]'>
                   <div class='flex'>
-                    <img  class='w-[300px] rounded-[4px]' src={item.img} alt="" />
+                    <img  class='w-[300px] rounded-[4px]' src={item.image} alt="" />
                     <div class='ml-[40px]'>
-                      <h2 class='text-black my-[6px]'>{item.name}</h2>
+                      <h2 class='text-black my-[6px]'>{item.product_model.name}</h2>
                       <div class='flex gap-[10px] mt-[20px]'>
                         <div class='w-[30px] h-[30px] border-[1px] rounded-[5px] bg-black'></div>
                         <div class='w-[30px] h-[30px] border-[1px] rounded-[5px] bg-slate-200'></div>
@@ -44,8 +59,8 @@ const Card = () => {
                             
                             {isOpen && (
                               <div className="drop-scroll">
-                                {data.products.map(item =>(
-                                  <h3 key={item.id}>{item.sizes}</h3>
+                                {products.map(item =>(
+                                  <h3 key={item.id}>{item.size}</h3>
                                 ))}
                               </div>
                             )}

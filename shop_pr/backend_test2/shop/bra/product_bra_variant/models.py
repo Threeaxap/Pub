@@ -10,8 +10,7 @@ class ProductBraVariant(models.Model):
     product = models.ForeignKey(ProductBraModel, on_delete=models.CASCADE)
     color = models.ForeignKey(ProductBraColor, on_delete=models.CASCADE)
     image = models.ForeignKey(ProductBraImage, null=True, on_delete=models.SET_NULL)
-    size = models.ForeignKey(ProductBraSize, on_delete=models.CASCADE)
-    cup_size = models.ForeignKey(ProductBraCupSize, on_delete=models.CASCADE, null=True)
-    stock = models.PositiveIntegerField(default=0)
 
+    def __str__(self):
+        return f"{self.product.name} - {self.color}"
     
