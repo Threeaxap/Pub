@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'bra.product_bra_variant',
     'bra.product_bra_cup_size_variant',
     'bra.product_bra_unit',
+    'underwear.product_underwear_unit',
     'underwear.product_underwear_color',
     'underwear.product_underwear_gender',
     'underwear.product_underwear_image',
@@ -99,17 +100,23 @@ WSGI_APPLICATION = 'shop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+    # 'default': {
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME':'shop_test',
+        # 'USER':'postgres',
+        # 'PASSWORD':'123',
+        # 'HOST':'localhost',
+        # 'PORT':'5432',
+    # }
+    # 
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'shop_test',
-        'USER':'postgres',
-        'PASSWORD':'123',
-        'HOST':'localhost',
-        'PORT':'5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators

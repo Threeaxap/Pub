@@ -1,19 +1,10 @@
 from rest_framework import serializers
 from .models import *
+from underwear.product_underwear_model.serializer import *
 
 class ProductUnderwearVariantSerializer(serializers.ModelSerializer):
-    product = serializers.SlugRelatedField(
-        slug_field='name',
-        queryset=ProductUnderwearModel.objects.all()
-    )
-    color = serializers.SlugRelatedField(
-        slug_field='color',
-        queryset=ProductUnderwearColor.objects.all()
-    )
-    size = serializers.SlugRelatedField(
-        slug_field='size',
-        queryset=ProductUnderwearSize.objects.all()
-    )
+    product_model = ProductUnderwearModelSerializer(source='product', read_only=True)
+
     class Meta:
         model = ProductUnderwearVariant
-        fields = '__all__'
+        fields = ['id', 'product_model']
