@@ -9,10 +9,11 @@ from underwear.product_underwear_variant. views import *
 from .views import *
 
 router = DefaultRouter()
-router.register(r'product_underwear', ProductUnderwearModelViewset)
+
+router.register(r'product_underwear_size', ProductUnderwearSizeViewset)
 router.register(r'product_underwear_color', ProductUnderwearColorViewset)
 router.register(r'product_underwear_image', ProductUnderwearImageViewset)
-router.register(r'product_underwear_size', ProductUnderwearSizeViewset)
+router.register(r'product_underwear', ProductUnderwearModelViewset)
 router.register(r'product_underwear_gender', ProductUnderwearGenderViewset)
 router.register(r'product_underwear_variant', ProductUnderwearVariantViewset)
 router.register(r'product_underwear_unit', ProductUnderwearUnitViewset)
