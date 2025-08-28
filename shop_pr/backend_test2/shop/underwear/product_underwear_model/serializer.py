@@ -4,7 +4,6 @@ from underwear.product_underwear_gender.serializer import ProductUnderwearGender
 
 
 class ProductUnderwearModelSerializer(serializers.ModelSerializer):
-    product_gender = ProductUnderwearGenderSerializer(source='gender', read_only=True)
     class Meta:
         model = ProductUnderwearModel
         fields = ['id', 'name', 'price', 'desc', 'product_gender']

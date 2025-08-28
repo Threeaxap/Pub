@@ -5,8 +5,195 @@ from bra.product_bra_size.serializer import *
 
 
 class ProductBraUnitSerializer(serializers.ModelSerializer):
-    product_variant = ProductBraCupSizeVariantSerializer(source='variant',read_only=True)
-    product_size = ProductBraSizeSerializer(source='size',read_only=True)
+    variant = ProductBraCupSizeVariantSerializer(read_only=True)
+    size = ProductBraSizeSerializer(read_only=True)
+    
+    variant_id = serializers.PrimaryKeyRelatedField(
+        queryset=ProductBraCupSizeVariant.objects.all(),
+        source='variant',
+        write_only=True
+    )
+    size_id = serializers.PrimaryKeyRelatedField(
+        queryset=ProductBraSize.objects.all(),
+        source='size',
+        write_only=True
+    )
+    
     class Meta:
         model = ProductBraUnit
-        fields = ['id', 'product_variant', 'product_size']
+        fields = ['id', 'variant', 'size', 'variant_id', 'size_id']
+    
+    def create(self, validated_data):
+        # Просто создаем объект - сериализатор автоматически подгрузит связи
+        return super().create(validated_data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
