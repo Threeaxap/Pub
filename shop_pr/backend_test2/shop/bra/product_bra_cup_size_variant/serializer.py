@@ -5,6 +5,8 @@ from bra.product_bra_cup_size.serializer import *
 
 
 class ProductBraCupSizeVariantSerializer(serializers.ModelSerializer):
+    product_variant = ProductBraVariantSerializer(source='variant', read_only=True)
+    product_cup_size = ProductBraCupSizeSerializer(source='cup_size', read_only=True)
     class Meta:
         model = ProductBraCupSizeVariant
-        fields = ['id', 'product_variant', 'product_cup_size']
+        fields = '__all__'

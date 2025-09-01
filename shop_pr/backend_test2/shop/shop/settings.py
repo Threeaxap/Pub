@@ -105,7 +105,7 @@ WSGI_APPLICATION = 'shop.wsgi.application'
         # 'ENGINE': 'django.db.backends.postgresql',
         # 'NAME':'shop_test',
         # 'USER':'postgres',
-        # 'PASSWORD':'123',
+        # 'PASSWORD':'Swedxzaqws',
         # 'HOST':'localhost',
         # 'PORT':'5432',
     # }
