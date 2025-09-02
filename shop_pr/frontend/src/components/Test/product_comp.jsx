@@ -4,18 +4,27 @@ import Modal from '@mui/material/Modal';
 
 
 const Products = () => {
-    const [products, setProducts] = useState([])
+    const [productModels, setProductModels] = useState([])
+    const [productVariants, setProductVariants] = useState([])
+    const [productUnits, setProductUnits] = useState([])
     const [loading, setLoading] = useState(true)
     const [selectedProduct, setSelectedProduct] = useState(null)
     const handleOpen = (id) => setSelectedProduct(id);
     const handleClose = () => setSelectedProduct(null);
 
     useEffect(()=>{
-        axios.get('http://127.0.0.1:8000/api/bra/product_bra_unit/')
-        .then(response => {
-            setProducts(response.data);
+        Promise.all([
+          axios.get('http://127.0.0.1:8000/api/bra/product_bra/'),
+          axios.get('http://127.0.0.1:8000/api/bra/product_bra_variant/'),
+          axios.get('http://127.0.0.1:8000/api/bra/product_bra_unit/')
+        ])       
+        .then(([modelResponse,variantResponse,unitResponse]) => {
+            setProductModels(modelResponse.data);
+            setProductVariants(variantResponse.data);
+            setProductUnits(unitResponse.data);
             setLoading(false)
         })
+
         .catch(error=>{
             console.error('ошибка при загрузке данных')
             setLoading(false)
@@ -24,22 +33,20 @@ const Products = () => {
 
   return (
       <div class='grid grid-cols-6 gap-[24px]'>
-        {products.map(item =>(
-          <div onClick={() => handleOpen(item?.product_cup_size_variant?.product_variant?.product_model?.id)} key={item.product_cup_size_variant.product_variant.product_model.id}> 
+        {productModels.map(item =>(
+          <div onClick={() => handleOpen(item?.id)} key={item?.id}> 
               <div class='items-end border-black p-[8px] m-[8px] w-fit rounded-[7px] relative'>
                 {/* <img src={item.variant.product.image} class='w-[300px] rounded-[4px]' alt="" /> */}
-                <h3 class='font-bold'>{item?.product_cup_size_variant?.product_variant?.product_model?.name}</h3>
-                <h4 class='text-[rgba(182,38,61)]'>${item?.product_cup_size_variant?.product_variant.product_model?.price}</h4>
+                <h3 class='font-bold'>{item?.name}</h3>
+                <h4 class='text-[rgba(182,38,61)]'>${item?.price}</h4>
               </div>
               <Modal
-                open={selectedProduct === item?.product_cup_size_variant?.product_variant?.product_model?.id}
+                open={selectedProduct === item?.id}
                 onClose={handleClose}
               >
-                <div class='w-200[px] h-200[px] bg-white'>
-                  {products.filter(unit =>(unit?.product_cup_size_variant?.product_variant?.product_model?.id == selectedProduct)).map(unit =>(
-                  <h3 key={unit?.product_cup_size_variant.id}>
-                    {unit?.product_cup_size_variant.product_cup_size.size}
-                  </h3>
+                <div class='w-[200px] h-[200px] bg-white'>
+                  {productVariants.filter(item =>(item?.product == selectedProduct)).map(item =>(
+                  <h3>{item?.product_color?.color}</h3>,
                 ))                
                 }
                 </div>        
