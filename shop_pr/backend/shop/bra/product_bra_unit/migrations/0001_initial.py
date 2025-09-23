@@ -9,18 +9,17 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('product_bra_cup_size_variant', '0001_initial'),
-        ('product_bra_size', '0001_initial'),
+        ('product_bra_cup_size', '0001_initial'),
+        ('product_bra_variant', '0002_remove_productbravariant_cup_size_and_more'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='ProductBraUnit',
+            name='ProductBraCupSizeVariant',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('stock', models.PositiveIntegerField(default=0)),
-                ('size', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='product_bra_size.productbrasize')),
-                ('variant', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='product_bra_cup_size_variant.productbracupsizevariant')),
+                ('cup_size', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='product_bra_cup_size.productbracupsize')),
+                ('variant', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='product_bra_variant.productbravariant')),
             ],
         ),
     ]

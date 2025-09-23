@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'bra.product_bra_model',
     'bra.product_bra_size',
     'bra.product_bra_variant',
-    'bra.product_bra_cup_size_variant',
     'bra.product_bra_unit',
     'underwear.product_underwear_unit',
     'underwear.product_underwear_color',
