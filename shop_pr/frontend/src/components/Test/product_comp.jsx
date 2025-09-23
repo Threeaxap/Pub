@@ -148,6 +148,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Modal from '@mui/material/Modal'
+import TiltedCard from './Carddesign'
 
 const Products = () => {
   const [products, setProducts] = useState([])
@@ -202,6 +203,7 @@ const Products = () => {
   return (
     <div className="grid grid-cols-6 gap-[24px]">
       {products.map(product => (
+        
         <div key={product.id} className="border p-4 m-2 rounded w-fit">
           <h3 className="font-bold">{product.name}</h3>
           <h4 className="text-[rgba(182,38,61)]">${product.price}</h4>
