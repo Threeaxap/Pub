@@ -148,14 +148,16 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Modal from '@mui/material/Modal'
-import TiltedCard from './Carddesign'
+import AnimatedList from './Scrollmenu'
 
 const Products = () => {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [selectedColor, setSelectedColor] = useState(null)
+  const [selectedColorList, setSelectedColorList] = useState(null)
   const [selectedSize, setSelectedSize] = useState(null)
+  
 
   const handleOpen = (product) => {
     setSelectedProduct(product)
@@ -234,6 +236,7 @@ const Products = () => {
                     type="button"
                     onClick={() => {
                       setSelectedColor(v)
+                      setSelectedColorList(product.variants.filter(u => u?.product_variant?.id === selectedColor.id))
                       setSelectedSize(null)
                     }}
                     className={`px-3 py-1 border rounded ${
@@ -249,7 +252,7 @@ const Products = () => {
                 <>
                   <h3 className="font-semibold mb-2">Размеры в наличии:</h3>
                   <div className="flex gap-2 flex-wrap">
-                    {product.units
+                    {/* {product.units
                       .filter(u => u?.product_variant?.id === selectedColor.id)
                       .map(u => (
                         <button
@@ -262,7 +265,14 @@ const Products = () => {
                         >
                           {u?.product_cup_size?.size} / {u.product_size?.size}
                         </button>
-                      ))}
+                      ))} */}
+                      <AnimatedList
+                        items={selectedColorList}
+                        onItemSelect={(item, index) => console.log(item, index)}
+                        showGradients={true}
+                        enableArrowNavigation={true}
+                        displayScrollbar={true}
+                      />
                   </div>
                 </>
               )}
