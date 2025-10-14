@@ -54,7 +54,17 @@ INSTALLED_APPS = [
     'underwear.product_underwear_model',
     'underwear.product_underwear_size',
     'underwear.product_underwear_variant',
+    'django_filters',
+    
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.SearchFilter',
+        'rest_framework.filters.OrderingFilter',
+    ]
+}
 
 MIDDLEWARE = [
    'corsheaders.middleware.CorsMiddleware',
