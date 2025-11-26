@@ -1,0 +1,18 @@
+/* justify-between flex items-center pb-[14px] */
+.navbar{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 24px 16px 24px 16px;
+    border-bottom: 1px solid rgb(209, 193, 169);
+    margin-bottom: 24px;
+    z-index: 4;
+}
+.prof{
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+.prof *{
+    height: 25px;
+}
