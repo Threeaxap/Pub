@@ -15,12 +15,6 @@ function App() {
   return (
     <>
         <Layout/>
-        <Aurora
-          colorStops={["#ffc6c6", "#ffcba9", "#ffa1b9"]}
-          blend={0.5}
-          amplitude={1.0}
-          speed={0.5}
-        />
         <Card/>
       
       
